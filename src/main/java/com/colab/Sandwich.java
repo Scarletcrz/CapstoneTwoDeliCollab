@@ -10,6 +10,9 @@ public class Sandwich {
         this.sandwichSize = sandwichSize;
     }
 
+//    public Sandwich() {
+//    }
+
     public Sandwich(String regularToppings, String sauces, String sides) {
         this.regularToppings = regularToppings;
         this.sauces = sauces;
