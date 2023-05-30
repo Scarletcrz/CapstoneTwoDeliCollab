@@ -2,11 +2,11 @@ package com.colab;
 
 public class Chip {
     private String type;
-    private float price;
+    private float chipPrice;
 
-    public Chip( String type, int price) {
+    public Chip( String type, int chipPrice) {
         this.type = type;
-        this.price = price;
+        this.chipPrice = Chip.this.chipPrice;
     }
 
     public String getType() {
@@ -18,17 +18,17 @@ public class Chip {
     }
 
     public float getPrice() {
-        return price;
+        return chipPrice;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setPrice(int chipPrice) {
+        this.chipPrice = Chip.this.chipPrice;
     }
 
     @Override
     public String toString() {
         return "Chip - " +
                 ", type: '" + type + '\'' +
-                ", price: " + price;
+                ", price: " + chipPrice;
     }
 }

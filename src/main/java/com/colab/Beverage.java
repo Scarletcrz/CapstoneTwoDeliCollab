@@ -2,12 +2,12 @@ package com.colab;
 
 public class Beverage {
     private String size;
-    private String type;
+    private String drinkType;
     private float price;
 
-    public Beverage(String size, String type, Float price) {
+    public Beverage(String size, String drinkType, Float price) {
         this.size = size;
-        this.type = type;
+        this.drinkType = drinkType;
         this.price = price;
     }
 
@@ -20,11 +20,11 @@ public class Beverage {
     }
 
     public String getType() {
-        return type;
+        return drinkType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setType(String drinkType) {
+        this.drinkType = drinkType;
     }
     public float getPrice(){
         return price;
@@ -37,7 +37,7 @@ public class Beverage {
     public String toString() {
         return "Beverage - " +
                 "size: '" + size + '\'' +
-                ", typ: '" + type + '\'' +
+                ", typ: '" + drinkType + '\'' +
                 ", price: " + price;
     }
 }
