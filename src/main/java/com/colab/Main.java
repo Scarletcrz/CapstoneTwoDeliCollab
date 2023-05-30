@@ -23,6 +23,15 @@ public class Main {
                 case 1:
                     createASandwich();
                     break;
+//                case 2:
+//                    orderDrink();
+//                    break;
+//                case 3:
+//                    orderChips();
+//                    break;
+//                case 4:
+//                    checkout();
+//                    break;
                 case 2:
                     System.out.println("Have a wonderful day!");
                     break;
@@ -31,15 +40,9 @@ public class Main {
                     break;
             }
         } while (optionInput != 2);
-
-
-
-
-
-
 //        Beverage beverage = new Beverage("small", "sweet tea", 3.99f);
 //        System.out.println(beverage);
-        }
+    }
     public static void createASandwich() {
         Scanner scanner = new Scanner(System.in);
 
@@ -59,7 +62,7 @@ public class Main {
             );
             String bread = scanner.nextLine();
 
-            System.out.println("Please choose a meat: " +
+            System.out.println("Please choose a meat: \n" +
                     "\t- steak\n" +
                     "\t- ham\n" +
                     "\t- salami\n" +
@@ -69,22 +72,31 @@ public class Main {
             );
             String meat = scanner.nextLine();
 
-            System.out.println("Please give me cheese.");
+            System.out.println("Please give me cheese.\n" +
+                "\t 1- american\n" +
+                "\t 2- provolone\n" +
+                "\t 3- cheddar\n" +
+                "\t 4- swiss\n" +
+                "\t 5- mozzarella\n" +
+                "\t 6- gouda\n"
+            );
             String cheese = scanner.nextLine();
 
             System.out.println("Would you like any sauces? y or n");
             String sauces = scanner.nextLine();
-            if (sauces.equals("y")){
+            if (sauces.equalsIgnoreCase("y")){
                 chooseASauce();
-            } else {
+            } else if (sauces.equalsIgnoreCase("n")){
                 chooseASide();
+            } else {
+                System.out.println("error you failed.");
             }
 
             System.out.println("Would you like a side? y or n");
             String sides = scanner.nextLine();
 
             try {
-                FileWriter depositFiles = new FileWriter("./src/main/java/com/iv/sandwich.txt", true);
+                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
                 BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
 
                 bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauces + "|" + sides);
@@ -101,7 +113,7 @@ public class Main {
     }
     public static void chooseASauce(){
         Scanner scanner = new Scanner(System.in);
-        int userInput = scanner.nextInt();
+        String userInput = scanner.nextLine();
 
         System.out.println("Please choose from our assortment: \n" +
             "\t 1- Mayo\n" +
@@ -110,14 +122,13 @@ public class Main {
             "\t 4- Ranch\n" +
             "\t 5- Thousand Islands\n" +
             "\t 6- Vinaigrette\n"
-        );
-        switch (userInput){
-            case 1:
+        ); while ( userInput != "6");
+//        switch (userInput){
+//            case 1: ;
 
-        }
     }
     public static void chooseASide(){
-        System.out.println("Please choose from our assortment: " +
+        System.out.println("Please choose from our sides: \n" +
                 "\t 1- au jus\n" +
                 "\t 2- sauce\n"
         );
