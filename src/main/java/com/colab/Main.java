@@ -98,6 +98,8 @@ public class Main {
                     chooseASide();
                 } else if (sideAnswer.equalsIgnoreCase("n")){
 
+                } else {
+                    System.out.println("Error code: B0Z0-413R7!");
                 }
             } else {
                 System.out.println("error you failed.");
