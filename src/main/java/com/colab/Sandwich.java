@@ -9,6 +9,7 @@ public class Sandwich {
     public Sandwich(String sandwichSize) {
         this.sandwichSize = sandwichSize;
     }
+
     public void checkout(){
 //        bread.getPrice + meat.getPrice + cheese.getPrice
     }
