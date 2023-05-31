@@ -3,7 +3,7 @@ package com.colab;
 import java.util.Scanner;
 
 public class Order {
-    static Scanner scanner = new Scanner(System.in);
+    Scanner scanner = new Scanner(System.in);
     int optionInput;
 
     {
@@ -42,7 +42,7 @@ public class Order {
 //        System.out.println(beverage);
     }
 
-        public static void createAnOrder () {
+        public void createAnOrder () {
 
 //        Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
         try {
@@ -122,7 +122,7 @@ public class Order {
             e.printStackTrace();
         }
     }
-        public static void orderChips() {
+        public void orderChips() {
         System.out.println("What kind of chips do you want?\n"
                 + "\t1 - Doritos\n"
                 + "\t2 - Kettle cooked Jalapeno chips\n"
@@ -135,7 +135,7 @@ public class Order {
 
 
     }
-        public static void orderDrink() {
+        public void orderDrink() {
         System.out.println("What kind of drinks do you want?\n"
                 + "\t1 - Water\n"
                 + "\t2 - Dr. Pepper\n"
@@ -146,7 +146,7 @@ public class Order {
 
         int drinkChoice = scanner.nextInt();
     }
-        public static void chooseASauce() {
+        public void chooseASauce() {
 
         System.out.println("Please choose one option from our assortment: \n" +
                 "\t 1- Mayo\n" +
@@ -166,7 +166,7 @@ public class Order {
 //                sand.add("Mayo");
 
     }
-        public static void chooseASide () {
+        public void chooseASide () {
         System.out.println("Please choose from our sides: \n" +
                 "\t 1- au jus\n" +
                 "\t 2- sauce\n"
