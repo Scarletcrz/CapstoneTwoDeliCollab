@@ -84,7 +84,7 @@ public class Main {
 
 
 //        while (true) {
-            System.out.println();
+//            System.out.println();
             System.out.println("Would you like any sauces? y or n: ");
             String sauces = scanner.nextLine();
 //            Scanner scanner = new Scanner(System.in);
@@ -94,38 +94,32 @@ public class Main {
             } else if (sauces.equalsIgnoreCase("n")) {
                 System.out.println("Do you want any sides? y or n:");
                 String sideAnswer = scanner.nextLine();
-                if (sideAnswer.equalsIgnoreCase("y")){
+                if (sideAnswer.equalsIgnoreCase("y")) {
                     chooseASide();
-                } else if (sideAnswer.equalsIgnoreCase("n")){
-
+                } else if (sideAnswer.equalsIgnoreCase("n")) {
+                    System.out.println("Not much of a fun-seeking-joy-loving-\n" +
+                            "experience-driven-semi-humanoid-being then i guess... \n" +
+                            "huh who woulda thunk.");
                 } else {
                     System.out.println("Error code: B0Z0-413R7!");
                 }
             } else {
-                System.out.println("error you failed.");
+                System.out.println("stop making mistakes or else...");
             }
-
+            System.out.println("\nThank you for creating that wonderful sandwich, \n" +
+                "before we move on to the purchasing of said sandwich, \n" +
+                "would you like to order chips and/or a drink? \n"
+                + "\t1 - Chips only: \n"
+                + "\t2 - Drink only: \n"
+                + "\t3 - Both only: \n"
+                + "\t4 - neither. . . (boringggggg *zzzzzzz*)\n");
+            String chipAndDrink = scanner.nextLine();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println();
     }
-
-//            try {
-//                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
-//                BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
-//
-//                bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauces + "|" + sides);
-//
-//                System.out.println("Sandwiched successfully!");
-//                bufferedWriter.close();
-//            } catch (Exception e) {
-//                System.out.println("Sandwich unsuccessful, error code 1053R");
-//                e.printStackTrace();
-//            }
-//        }
-
-
-    public static void chooseASauce () {
+    public static void chooseASauce() {
 
         System.out.println("Please choose one option from our assortment: \n" +
                 "\t 1- Mayo\n" +
@@ -153,3 +147,17 @@ public class Main {
         String sideAnswer = scanner.nextLine();
     }
 }
+
+//            try {
+//                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
+//                BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
+//
+//                bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauces + "|" + sides);
+//
+//                System.out.println("Sandwiched successfully!");
+//                bufferedWriter.close();
+//            } catch (Exception e) {
+//                System.out.println("Sandwich unsuccessful, error code 1053R");
+//                e.printStackTrace();
+//            }
+//        }
