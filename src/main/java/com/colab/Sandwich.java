@@ -2,7 +2,6 @@ package com.colab;
 
 public class Sandwich {
     private String sandwichSize;
-    private double sandwichPrice;
     private String meatSize;
     private double extraMeat;
     private String cheeseSize;
@@ -10,6 +9,11 @@ public class Sandwich {
     private String regularToppings;
     private String sauce;
     private String side;
+
+    public Sandwich(String sandwichSize) {
+        this.sandwichSize = sandwichSize;
+    }
+
 
     public void checkout(){
 //        bread.getPrice + meat.getPrice + cheese.getPrice
@@ -19,16 +23,15 @@ public class Sandwich {
 //    }
 
 
-    public Sandwich(String sandwichSize, String meatSize, double extraMeat, String cheeseSize, double extraCheesePrice,
+    public Sandwich(String sandwichSize, String meatSize, double extraMeat, String cheeseSize,
                     String regularToppings, String sauces, String sides) {
         this.sandwichSize = sandwichSize;
         this.meatSize = meatSize;
         this.extraMeat = extraMeat;
         this.cheeseSize = cheeseSize;
-        this.extraCheesePrice = extraCheesePrice;
         this.regularToppings = regularToppings;
-        this.sauce = sauces;
-        this.side = sides;
+        this.sauce = sauce;
+        this.side = side;
     }
 
     public String getSandwichSize() {
@@ -100,7 +103,6 @@ public class Sandwich {
     public String toString() {
         return "Sandwich{" +
                 "sandwichSize='" + sandwichSize + '\'' +
-                ", sandwichPrice=" + sandwichPrice +
                 ", meatSize='" + meatSize + '\'' +
                 ", extraMeat=" + extraMeat +
                 ", cheeseSize='" + cheeseSize + '\'' +
