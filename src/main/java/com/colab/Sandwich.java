@@ -2,13 +2,15 @@ package com.colab;
 
 public class Sandwich {
     private String sandwichSize;
+    private double sandwichPrice;
+    private String meatSize;
+    private double extraMeat;
+    private String cheeseSize;
+    private double extraCheesePrice;
     private String regularToppings;
-    private String sauces;
-    private String sides;
+    private String sauce;
+    private String side;
 
-    public Sandwich(String sandwichSize) {
-        this.sandwichSize = sandwichSize;
-    }
     public void checkout(){
 //        bread.getPrice + meat.getPrice + cheese.getPrice
     }
@@ -16,10 +18,17 @@ public class Sandwich {
 //    public Sandwich() {
 //    }
 
-    public Sandwich(String regularToppings, String sauces, String sides) {
+
+    public Sandwich(String sandwichSize, String meatSize, double extraMeat, String cheeseSize, double extraCheesePrice,
+                    String regularToppings, String sauces, String sides) {
+        this.sandwichSize = sandwichSize;
+        this.meatSize = meatSize;
+        this.extraMeat = extraMeat;
+        this.cheeseSize = cheeseSize;
+        this.extraCheesePrice = extraCheesePrice;
         this.regularToppings = regularToppings;
-        this.sauces = sauces;
-        this.sides = sides;
+        this.sauce = sauces;
+        this.side = sides;
     }
 
     public String getSandwichSize() {
@@ -30,6 +39,39 @@ public class Sandwich {
         this.sandwichSize = sandwichSize;
     }
 
+    public String getMeatSize() {
+        return meatSize;
+    }
+
+    public void setMeatSize(String meatSize) {
+        this.meatSize = meatSize;
+    }
+
+    public double getExtraMeat() {
+        return extraMeat;
+    }
+
+    public void setExtraMeat(double extraMeat) {
+        this.extraMeat = extraMeat;
+    }
+
+    public String getCheeseSize() {
+        return cheeseSize;
+    }
+
+    public void setCheeseSize(String cheeseSize) {
+        this.cheeseSize = cheeseSize;
+    }
+
+
+    public double getExtraCheesePrice() {
+        return extraCheesePrice;
+    }
+
+    public void setExtraCheesePrice(double extraCheesePrice) {
+        this.extraCheesePrice = extraCheesePrice;
+    }
+
     public String getRegularToppings() {
         return regularToppings;
     }
@@ -38,29 +80,34 @@ public class Sandwich {
         this.regularToppings = regularToppings;
     }
 
-    public String getSauces() {
-        return sauces;
+    public String getSauce() {
+        return sauce;
     }
 
-    public void setSauces(String sauces) {
-        this.sauces = sauces;
+    public void setSauce(String sauce) {
+        this.sauce = sauce;
     }
 
-    public String getSides() {
-        return sides;
+    public String getSide() {
+        return side;
     }
 
-    public void setSides(String sides) {
-        this.sides = sides;
+    public void setSide(String side) {
+        this.side = side;
     }
 
     @Override
     public String toString() {
         return "Sandwich{" +
                 "sandwichSize='" + sandwichSize + '\'' +
+                ", sandwichPrice=" + sandwichPrice +
+                ", meatSize='" + meatSize + '\'' +
+                ", extraMeat=" + extraMeat +
+                ", cheeseSize='" + cheeseSize + '\'' +
+                ", extraCheesePrice=" + extraCheesePrice +
                 ", regularToppings='" + regularToppings + '\'' +
-                ", sauces='" + sauces + '\'' +
-                ", sides='" + sides + '\'' +
+                ", sauce='" + sauce + '\'' +
+                ", side='" + side + '\'' +
                 '}';
     }
 }
