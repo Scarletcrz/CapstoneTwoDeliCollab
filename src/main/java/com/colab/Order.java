@@ -69,6 +69,7 @@ public class Order {
                     "\t- wrap\n"
             );
             String bread = scanner.nextLine();
+            sandwich.getBreadTopping(bread);
 
             System.out.println("Please choose a meat: \n" +
                     "\t- steak\n" +
@@ -79,6 +80,7 @@ public class Order {
                     "\t- bacon\n"
             );
             String meat = scanner.nextLine();
+            sandwich.getmeatTopping(meat);
 
             System.out.println("Please give me cheese.\n" +
                     "\t 1- american\n" +
@@ -89,6 +91,7 @@ public class Order {
                     "\t 6- gouda\n"
             );
             String cheese = scanner.nextLine();
+            sandwich.getCheeseTopping(cheese);
 
 
 //        while (true) {

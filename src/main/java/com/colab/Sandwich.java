@@ -4,16 +4,21 @@ import java.util.ArrayList;
 
 public class Sandwich {
     private String sandwichSize;
-    private ArrayList<String> regularToppings = new ArrayList<>();
+    private ArrayList<String> breadTopping = new ArrayList<>();
+    private ArrayList<String> meatTopping = new ArrayList<>();
+    private ArrayList<String> cheeseTopping = new ArrayList<>();
+
     private ArrayList<String> sauce = new ArrayList<>();
     private ArrayList<String> side = new ArrayList<>(); // made all of these arraylists, gotta fix all the gets sets and cons
     private String extraMeat;
     private String extraCheese;
 
 
-    public Sandwich(String sandwichSize, ArrayList<String> regularToppings, ArrayList<String> sauce, ArrayList<String> side, String extraMeat, String extraCheese) {
+    public Sandwich(String sandwichSize, ArrayList<String> breadTopping, ArrayList<String> meatTopping,ArrayList<String> cheeseTopping,ArrayList<String> sauce, ArrayList<String> side, String extraMeat, String extraCheese) {
         this.sandwichSize = sandwichSize;
-        this.regularToppings = regularToppings;
+        this.breadTopping = breadTopping;
+        this.meatTopping = meatTopping;
+        this.cheeseTopping = cheeseTopping;
         this.sauce = sauce;
         this.side = side;
         this.extraMeat = extraMeat;
@@ -46,11 +51,23 @@ public class Sandwich {
         this.extraCheese = extraCheese;
     }
 
-    public ArrayList<String> getRegularToppings (){
-        return regularToppings;
+    public ArrayList<String> getBreadTopping(ArrayList<String> breadTopping){
+        return breadTopping;
     }
-    public void addRegularToppings(String regularTopping){
-        this.regularToppings.add(regularTopping);
+    public void addBreadTopping(String breadTopping){
+        this.breadTopping.add(breadTopping);
+    }
+    public ArrayList<String> getmeatTopping(){
+        return meatTopping;
+    }
+    public void addMeatTopping(String meatTopping){
+        this.meatTopping.add(meatTopping);
+    }
+    public ArrayList<String> getCheeseTopping (){
+        return cheeseTopping;
+    }
+    public void addCheeseTopping(String cheeseTopping){
+        this.cheeseTopping.add(cheeseTopping);
     }
 
     public ArrayList<String> getSauce() {
@@ -79,11 +96,11 @@ public class Sandwich {
     }
 
     public double getCostMeatToppings() {
-        if (regularToppings.equals("small")) {
+        if (meatTopping.equals("small")) {
             return 1.00;
-        } else if (regularToppings.equals("medium")) {
+        } else if (meatTopping.equals("medium")) {
             return 2.00;
-        } else if (regularToppings.equals("large")) {
+        } else if (meatTopping.equals("large")) {
             return 3.00;
         } else {
             return 0.00; // Default cost if size is unknown
@@ -100,7 +117,7 @@ public class Sandwich {
             return 0.00; // Default cost if size is unknown
         }
     }
-    public double getCost() {
+    public double getCostExtraCheese() {
         if (extraCheese.equals("small")) {
             return 0.30;
         } else if (extraCheese.equals("medium")) {
@@ -118,7 +135,9 @@ public class Sandwich {
     public String toString() {
         return "Sandwich{" +
                 "sandwichSize='" + sandwichSize + '\'' +
-                ", regularToppings=" + regularToppings +
+                ", breadToppings=" + breadTopping +
+                ", meatToppings=" + meatTopping +
+                ", cheeseToppings=" + cheeseTopping +
                 ", sauce=" + sauce +
                 ", side=" + side +
                 '}';
