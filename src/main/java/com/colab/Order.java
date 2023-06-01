@@ -191,7 +191,7 @@ public class Order {
 //        if (sauceChoice != 6) ;
         switch (sauceChoice) {
             case "1":
-                String sauce1 = Integer.toString(1);
+                sandwich.get
                 break;
             case "2":
                 String sauce2 = Integer.toString(2);
