@@ -9,12 +9,14 @@ public class Sandwich {
     public Sandwich(String sandwichSize) {
         this.sandwichSize = sandwichSize;
     }
+
+    public Sandwich() {
+
+    }
+
     public void checkout(){
 //        bread.getPrice + meat.getPrice + cheese.getPrice
     }
-
-//    public Sandwich() {
-//    }
 
     public Sandwich(String regularToppings, String sauces, String sides) {
         this.regularToppings = regularToppings;
