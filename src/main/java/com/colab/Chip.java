@@ -1,20 +1,22 @@
 package com.colab;
 
+import java.util.ArrayList;
+
 public class Chip {
-    private String type;
+    private ArrayList<String> chipType = new ArrayList<>();
     private float chipPrice;
 
-    public Chip( String type, int chipPrice) {
-        this.type = type;
-        this.chipPrice = Chip.this.chipPrice;
+    public Chip(ArrayList<String> chipType, float chipPrice) {
+        this.chipType = chipType;
+        this.chipPrice = chipPrice;
     }
 
-    public String getType() {
-        return type;
+    public ArrayList<String> getChipType(){
+        return chipType;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void addChipType(String chipType){
+        this.chipType.add(chipType);
     }
 
     public float getPrice() {
@@ -28,7 +30,7 @@ public class Chip {
     @Override
     public String toString() {
         return "Chip - " +
-                ", type: '" + type + '\'' +
+                ", type: '" + chipType + '\'' +
                 ", price: " + chipPrice;
     }
 }
