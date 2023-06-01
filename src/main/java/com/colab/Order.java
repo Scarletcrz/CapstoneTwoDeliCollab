@@ -8,6 +8,7 @@ public class Order {
     static Scanner scanner = new Scanner(System.in);
     int optionInput;
 
+    Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
     public void display() {
         do {
             System.out.println("Here are your options: \n" +
@@ -21,6 +22,7 @@ public class Order {
 
             switch (optionInput) {
                 case 1:
+                    scanner.nextLine();
                     createAnOrder();
                     break;
                 case 2:
@@ -47,7 +49,6 @@ public class Order {
 
     public void createAnOrder() {
 
-        Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
         try {
 //            Sandwich sandwich = new Sandwich(); // not sure if this is how im supposed to be using it
 
@@ -57,6 +58,7 @@ public class Order {
                     "\t- large sandwich.\n"
             );
             String size = scanner.nextLine();
+            sandwich.setSandwichSize(size);
 
             /////////////////// first error above ^^^^^^^^^^^^^^^^^^^^^^/////////////////
 
@@ -92,13 +94,13 @@ public class Order {
 //        while (true) {
 //            System.out.println();
             System.out.println("Would you like any sauces? y or n: ");
-            String sauces = scanner.nextLine();
+            String wantSauce = scanner.nextLine();
 //            Scanner scanner = new Scanner(System.in);
 
-            if (sauces.equalsIgnoreCase("y")) {
+            if (wantSauce.equalsIgnoreCase("y")) {
                 chooseASauce();
                 int sauceAnswer = scanner.nextInt();
-            } else if (sauces.equalsIgnoreCase("n")) {
+            } else if (wantSauce.equalsIgnoreCase("n")) {
                 System.out.println("Do you want any sides? y or n:");
                 String sideAnswer = scanner.nextLine();
 
@@ -190,22 +192,22 @@ public class Order {
 //        if (sauceChoice != 6) ;
         switch (sauceChoice) {
             case "1":
-                String sauce1 = Integer.toString(1);
+                sandwich.addSauce("MaYo");
                 break;
             case "2":
-                String sauce2 = Integer.toString(2);
+                sandwich.addSauce("Mustard");
                 break;
             case "3":
-                String sauce3 = Integer.toString(3);
+                sandwich.addSauce("Ketchup");
                 break;
             case "4":
-                String sauce4 = Integer.toString(4);
+                sandwich.addSauce("Ranch");
                 break;
             case "5":
-                String sauce5 = Integer.toString(5);
+                sandwich.addSauce("Thousand Islands");
                 break;
             case "6":
-                String sauce6 = Integer.toString(6);
+                sandwich.addSauce("Vinaigrette");
                 break;
             default:
                 System.out.println("something went wrong, please try again.");

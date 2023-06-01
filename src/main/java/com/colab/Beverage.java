@@ -1,11 +1,13 @@
 package com.colab;
 
+import java.util.ArrayList;
+
 public class Beverage {
     private String size;
-    private String drinkType;
+    private ArrayList<String> drinkType = new ArrayList<>();
     private float price;
 
-    public Beverage(String size, String drinkType, Float price) {
+    public Beverage(String size, ArrayList<String> drinkType, float price) {
         this.size = size;
         this.drinkType = drinkType;
         this.price = price;
@@ -19,12 +21,12 @@ public class Beverage {
         this.size = size;
     }
 
-    public String getType() {
+    public ArrayList<String> getDrinkType() {
         return drinkType;
     }
 
-    public void setType(String drinkType) {
-        this.drinkType = drinkType;
+    public void addDrinkType(String drinkType) {
+        this.drinkType.add(drinkType);
     }
     public float getPrice(){
         return price;
