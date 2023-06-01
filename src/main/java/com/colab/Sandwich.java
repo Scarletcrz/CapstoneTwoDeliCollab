@@ -66,6 +66,54 @@ public class Sandwich {
         this.side.add(side);
     }
 
+    public double getCostSandwich() {
+        if (sandwichSize.equals("small")) {
+            return 5.50;
+        } else if (sandwichSize.equals("medium")) {
+            return 7.00;
+        } else if (sandwichSize.equals("large")) {
+            return 8.50;
+        } else {
+            return 0.00; // Default cost if size is unknown
+        }
+    }
+
+    public double getCostMeatToppings() {
+        if (regularToppings.equals("small")) {
+            return 1.00;
+        } else if (regularToppings.equals("medium")) {
+            return 2.00;
+        } else if (regularToppings.equals("large")) {
+            return 3.00;
+        } else {
+            return 0.00; // Default cost if size is unknown
+        }
+    }
+    public double getCostExtraMeat() {
+        if (extraMeat.equals("small")) {
+            return .50;
+        } else if (extraMeat.equals("medium")) {
+            return 1.00;
+        } else if (extraMeat.equals("large")) {
+            return 1.50;
+        } else {
+            return 0.00; // Default cost if size is unknown
+        }
+    }
+    public double getCost() {
+        if (extraCheese.equals("small")) {
+            return 0.30;
+        } else if (extraCheese.equals("medium")) {
+            return 0.60;
+        } else if (extraCheese.equals("large")) {
+            return 0.90;
+        } else {
+            return 0.00; // Default cost if size is unknown
+        }
+    }
+
+
+
     @Override
     public String toString() {
         return "Sandwich{" +
