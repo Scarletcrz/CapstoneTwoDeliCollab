@@ -5,10 +5,10 @@ import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Order {
-    Scanner scanner = new Scanner(System.in);
+    static Scanner scanner = new Scanner(System.in);
     int optionInput;
 
-    public void display(){
+    public void display() {
         do {
             System.out.println("Here are your options: \n" +
                     "\t1 - Place a New Order\n" +
@@ -47,12 +47,18 @@ public class Order {
 
     public void createAnOrder() {
 
-//        Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
+        Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
         try {
-            System.out.println("Please give me a four inch, eight inch or twelve inch.");
+//            Sandwich sandwich = new Sandwich(); // not sure if this is how im supposed to be using it
+
+            System.out.println("Please choose a size: \n" +
+                    "\t- small \n" +
+                    "\t- medium \n" +
+                    "\t- large sandwich.\n"
+            );
             String size = scanner.nextLine();
 
-            Sandwich sandwich = new Sandwich(size); // not sure if this is how im supposed to be using it
+            /////////////////// first error above ^^^^^^^^^^^^^^^^^^^^^^/////////////////
 
             System.out.println("Please choose me a bread type: \n" +
                     "\t- white\n" +
@@ -91,6 +97,7 @@ public class Order {
 
             if (sauces.equalsIgnoreCase("y")) {
                 chooseASauce();
+                int sauceAnswer = scanner.nextInt();
             } else if (sauces.equalsIgnoreCase("n")) {
                 System.out.println("Do you want any sides? y or n:");
                 String sideAnswer = scanner.nextLine();
@@ -106,6 +113,18 @@ public class Order {
                 }
             } else {
                 System.out.println("stop making mistakes or else...");
+            }
+            try {
+                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
+                BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
+
+//                bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauceAnswer + "|" + sideAnswer);
+
+                System.out.println("Sandwiched successfully!");
+                bufferedWriter.close();
+            } catch (Exception e) {
+                System.out.println("Sandwich unsuccessful, error code 1053R");
+                e.printStackTrace();
             }
             System.out.println("\nThank you for creating that wonderful sandwich, \n" +
                     "before we move on to the purchasing of said sandwich, \n" +
@@ -125,21 +144,9 @@ public class Order {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        try {
-                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
-                BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
+    }
 
-            bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauces + "|" + sides);
-
-                System.out.println("Sandwiched successfully!");
-                bufferedWriter.close();
-            } catch (Exception e) {
-                System.out.println("Sandwich unsuccessful, error code 1053R");
-                e.printStackTrace();
-            }
-        }
-
-        public void orderChips() {
+    public void orderChips() {
         System.out.println("What kind of chips do you want?\n"
                 + "\t1 - Doritos\n"
                 + "\t2 - Kettle cooked Jalapeno chips\n"
@@ -152,7 +159,8 @@ public class Order {
 
 
     }
-        public void orderDrink() {
+
+    public void orderDrink() {
         System.out.println("What kind of drinks do you want?\n"
                 + "\t1 - Water\n"
                 + "\t2 - Dr. Pepper\n"
@@ -165,7 +173,8 @@ public class Order {
 
 
     }
-        public void chooseASauce() {
+
+    public void chooseASauce() {
 
         System.out.println("Please choose one option from our assortment: \n" +
                 "\t 1- Mayo\n" +
@@ -176,21 +185,51 @@ public class Order {
                 "\t 6- Vinaigrette\n"
         );
 
-        int sauceChoice = scanner.nextInt();
+        String sauceChoice = scanner.nextLine();
 
-//        while (userInput != "6") ;
-//        System.out.println();
-//        switch (userInput){
-//            case 1:;
-//                sand.add("Mayo");
-
+//        if (sauceChoice != 6) ;
+        switch (sauceChoice) {
+            case "1":
+                String sauce1 = Integer.toString(1);
+                break;
+            case "2":
+                String sauce2 = Integer.toString(2);
+                break;
+            case "3":
+                String sauce3 = Integer.toString(3);
+                break;
+            case "4":
+                String sauce4 = Integer.toString(4);
+                break;
+            case "5":
+                String sauce5 = Integer.toString(5);
+                break;
+            case "6":
+                String sauce6 = Integer.toString(6);
+                break;
+            default:
+                System.out.println("something went wrong, please try again.");
+                break;
+        }
     }
-        public void chooseASide () {
+    public void chooseASide () {
         System.out.println("Please choose from our sides: \n" +
                 "\t 1- au jus\n" +
                 "\t 2- sauce\n"
         );
-        int sideAnswer = scanner.nextInt();
+        String sideAnswer = scanner.nextLine();
+
+        switch (sideAnswer) {
+            case "1":
+                String side = Integer.toString(1);
+                break;
+            case "2":
+                chooseASauce();
+                break;
+            default:
+                System.out.println("something went wrong, please try again.");
+                break;
+        }
     }
 }
 
