@@ -6,7 +6,7 @@ public class Order {
     Scanner scanner = new Scanner(System.in);
     int optionInput;
 
-    {
+    public void display(){
         do {
             System.out.println("Here are your options: \n" +
                     "\t1 - Place a New Order\n" +
@@ -42,7 +42,8 @@ public class Order {
 //        System.out.println(beverage);
     }
 
-        public void createAnOrder () {
+
+    public void createAnOrder() {
 
 //        Sandwich sandwich = new Sandwich(); // probably wrong but ill keep it here
         try {
@@ -86,22 +87,25 @@ public class Order {
             String sauces = scanner.nextLine();
 //            Scanner scanner = new Scanner(System.in);
 
-            if (sauces.equalsIgnoreCase("y")) {
+            while (sauces.equalsIgnoreCase("y")) {
                 chooseASauce();
-            } else if (sauces.equalsIgnoreCase("n")) {
+                break;
+            } while (sauces.equalsIgnoreCase("n")) {
                 System.out.println("Do you want any sides? y or n:");
                 String sideAnswer = scanner.nextLine();
-                if (sideAnswer.equalsIgnoreCase("y")) {
+
+                while (sideAnswer.equalsIgnoreCase("y")) {
                     chooseASide();
-                } else if (sideAnswer.equalsIgnoreCase("n")) {
+                } while (sideAnswer.equalsIgnoreCase("n")) {
                     System.out.println("Not much of a fun-seeking-joy-loving-\n" +
                             "experience-driven-semi-humanoid-being then i guess... \n" +
                             "huh who woulda thunk.");
-                } else {
+                } while(sideAnswer!="y"||sideAnswer!="n") {
                     System.out.println("Error code: B0Z0-413R7!");
                 }
-            } else {
+            } while(sauces!="y"||sauces!="n") {
                 System.out.println("stop making mistakes or else...");
+                break;
             }
             System.out.println("\nThank you for creating that wonderful sandwich, \n" +
                     "before we move on to the purchasing of said sandwich, \n" +
@@ -122,6 +126,7 @@ public class Order {
             e.printStackTrace();
         }
     }
+
         public void orderChips() {
         System.out.println("What kind of chips do you want?\n"
                 + "\t1 - Doritos\n"
