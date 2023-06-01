@@ -1,10 +1,12 @@
 package com.colab;
 
+import java.util.ArrayList;
+
 public class Sandwich {
     private String sandwichSize;
-    private String regularToppings;
-    private String sauces;
-    private String sides;
+    private ArrayList<String> regularToppings;
+    private ArrayList<String> sauces;
+    private ArrayList<String> sides; // made all of these arraylists, gotta fix all the gets sets and cons
 
     public Sandwich(String sandwichSize) {
         this.sandwichSize = sandwichSize;
@@ -55,6 +57,8 @@ public class Sandwich {
     public void setSides(String sides) {
         this.sides = sides;
     }
+
+    public void
 
     @Override
     public String toString() {
