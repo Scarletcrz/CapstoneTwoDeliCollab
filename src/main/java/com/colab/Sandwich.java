@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Sandwich {
     private String sandwichSize;
     private ArrayList<String> breadTopping = new ArrayList<>();
+//    public String breadType;
     private ArrayList<String> meatTopping = new ArrayList<>();
     private ArrayList<String> cheeseTopping = new ArrayList<>();
 
@@ -51,19 +52,19 @@ public class Sandwich {
         this.extraCheese = extraCheese;
     }
 
-    public ArrayList<String> getBreadTopping(ArrayList<String> breadTopping){
+    public String getBreadTopping(String breadTopping){
         return breadTopping;
     }
     public void addBreadTopping(String breadTopping){
         this.breadTopping.add(breadTopping);
     }
-    public ArrayList<String> getmeatTopping(){
+    public ArrayList<String> getmeatTopping(String meat){
         return meatTopping;
     }
     public void addMeatTopping(String meatTopping){
         this.meatTopping.add(meatTopping);
     }
-    public ArrayList<String> getCheeseTopping (){
+    public ArrayList<String> getCheeseTopping (String cheese){
         return cheeseTopping;
     }
     public void addCheeseTopping(String cheeseTopping){
