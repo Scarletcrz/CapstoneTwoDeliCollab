@@ -12,17 +12,3 @@ public class Main {
         order.display();
     }
 }
-
-//            try {
-//                FileWriter depositFiles = new FileWriter("./src/main/java/com/colab/sandwich.txt", true);
-//                BufferedWriter bufferedWriter = new BufferedWriter(depositFiles);
-//
-//                bufferedWriter.write("\n" + size + "|" + bread + "|" + meat + "|" + cheese + "|" + sauces + "|" + sides);
-//
-//                System.out.println("Sandwiched successfully!");
-//                bufferedWriter.close();
-//            } catch (Exception e) {
-//                System.out.println("Sandwich unsuccessful, error code 1053R");
-//                e.printStackTrace();
-//            }
-//        }
