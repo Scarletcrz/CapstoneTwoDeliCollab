@@ -23,8 +23,16 @@ public class Chip {
         return chipPrice;
     }
 
+
     public void setPrice(int chipPrice) {
         this.chipPrice = Chip.this.chipPrice;
+    }
+    public double getCost() {
+        if (chipType.equals("yes")) {
+            return 1.50;
+        } else {
+            return 0.00; // Default cost if size is unknown
+        }
     }
 
     @Override
