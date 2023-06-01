@@ -58,6 +58,8 @@ public class Order {
             );
             String size = scanner.nextLine();
 
+            sandwich.getSandwichSize(size);
+
             /////////////////// first error above ^^^^^^^^^^^^^^^^^^^^^^/////////////////
 
             System.out.println("Please choose me a bread type: \n" +
@@ -190,25 +192,25 @@ public class Order {
 //        if (sauceChoice != 6) ;
         switch (sauceChoice) {
             case "1":
-                String sauce1 = Integer.toString(1);
+                sandwich.addSauce("Mayo");
                 break;
             case "2":
-                String sauce2 = Integer.toString(2);
+                sandwich.addSauce("Mustard");
                 break;
             case "3":
-                String sauce3 = Integer.toString(3);
+                sandwich.addSauce("Ketchup");
                 break;
             case "4":
-                String sauce4 = Integer.toString(4);
+                sandwich.addSauce("Ranch");
                 break;
             case "5":
-                String sauce5 = Integer.toString(5);
+                sandwich.addSauce("Thousand Islands");
                 break;
             case "6":
-                String sauce6 = Integer.toString(6);
+                sandwich.addSauce("Vinaigrette");
                 break;
             default:
-                System.out.println("something went wrong, please try again.");
+                System.out.println("its getting late in the day isn't it.....");
                 break;
         }
     }
