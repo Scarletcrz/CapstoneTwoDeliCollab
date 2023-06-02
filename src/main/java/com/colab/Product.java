@@ -17,6 +17,11 @@ public abstract class Product {
         this.name = name;
     }
 
+    public Product() {
+
+    }
+
+
     public ArrayList<String> getProduct() {
         return product;
     }

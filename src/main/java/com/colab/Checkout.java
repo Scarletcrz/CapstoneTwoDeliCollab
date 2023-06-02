@@ -2,15 +2,18 @@ package com.colab;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class CheckOut {
+public class Checkout {
 
 //    public class OrderSystem {
         private String orderDetails;
         private double price;
 
-    public CheckOut(String orderDetails, double price) {
+    public Checkout(String orderDetails, double price) {
         this.orderDetails = orderDetails;
         this.price = price;
+    }
+    public Checkout() {
+
     }
 
     public String getOrderDetails() {
@@ -74,10 +77,9 @@ public class CheckOut {
 
     @Override
     public String toString() {
-        return "CheckOut{" +
-                "orderDetails='" + orderDetails + '\'' +
-                ", price=" + price +
-                '}';
+        return "CheckOut - " +
+                "orderDetails: " + orderDetails + '\'' +
+                ", price: " + price;
     }
 }
 

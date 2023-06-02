@@ -1,2 +1,7 @@
-asdf|asdf|asdf|asdf|y|n
-gfh|jh|jhy|hng|y|n
+The Best Burger Joint|
+small|wheat|chicken|no|yes|small
+large|white|ham|gouda|y|large
+medium|white|ham|mozzarella|y|medium
+small|wrap|bacon|swiss|no|small
+small|white|steak|provolone|no|small
+||||Mayo|Au jus

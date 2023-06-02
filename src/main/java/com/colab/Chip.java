@@ -2,11 +2,12 @@ package com.colab;
 
 import java.util.ArrayList;
 
-public class Chip {
+public class Chip extends Product{
     private ArrayList<String> chipType = new ArrayList<>();
     private float chipPrice;
 
-    public Chip(ArrayList<String> chipType, float chipPrice) {
+    public Chip(ArrayList<String> product, String name, ArrayList<String> chipType, float chipPrice) {
+        super(product, name);
         this.chipType = chipType;
         this.chipPrice = chipPrice;
     }

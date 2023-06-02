@@ -2,7 +2,7 @@ package com.colab;
 
 import java.util.ArrayList;
 
-public class Sandwich {
+public class Sandwich extends Product{
     private String sandwichSize;
     private ArrayList<String> breadTopping = new ArrayList<>();
 //    public String breadType;
@@ -15,7 +15,8 @@ public class Sandwich {
     private String extraCheese;
 
 
-    public Sandwich(String sandwichSize, ArrayList<String> breadTopping, ArrayList<String> meatTopping,ArrayList<String> cheeseTopping,ArrayList<String> sauce, ArrayList<String> side, String extraMeat, String extraCheese) {
+    public Sandwich(ArrayList<String> product, String name, String sandwichSize, ArrayList<String> breadTopping, ArrayList<String> meatTopping, ArrayList<String> cheeseTopping, ArrayList<String> sauce, ArrayList<String> side, String extraMeat, String extraCheese) {
+        super(product, name);
         this.sandwichSize = sandwichSize;
         this.breadTopping = breadTopping;
         this.meatTopping = meatTopping;
@@ -25,8 +26,13 @@ public class Sandwich {
         this.extraMeat = extraMeat;
         this.extraCheese = extraCheese;
     }
-    public Sandwich(){}
+    public Sandwich(ArrayList<String> product, String name){
+        super(product, name);
+    }
 
+    public Sandwich() {
+        super();
+    }
 
     public String getSandwichSize() {
         return sandwichSize;
@@ -71,13 +77,13 @@ public class Sandwich {
         this.cheeseTopping.add(cheeseTopping);
     }
 
-    public ArrayList<String> getSauce() {
+    public ArrayList<String> getSauce(String sauceAnswer) {
         return sauce;
     }
     public void addSauce(String sauce){
         this.sauce.add(sauce);
     }
-    public ArrayList<String> getSide() {
+    public ArrayList<String> getSide(String userSideChoice) {
         return side;
     }
     public void addSide(String side) {
