@@ -9,13 +9,18 @@ public abstract class Product {
 
     // sandwiches, chips, drinks
 
-//    private double price;
+    //    private double price;
     private String name;
 
     public Product(ArrayList<String> product, String name) {
         this.product = product;
         this.name = name;
     }
+
+    public Product() {
+
+    }
+
 
     public ArrayList<String> getProduct() {
         return product;
